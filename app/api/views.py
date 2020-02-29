@@ -7,3 +7,5 @@ class HealthCheckAPIView(BaseAPIResource):
                 "status": "success",
                 "version": 0.1
         }
+
+

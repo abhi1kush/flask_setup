@@ -5,7 +5,7 @@ ROOTDIR=/automatic-test-generator/
 NUM_WORKERS=1
 
 cd $ROOTDIR
-
+pwd
 exec gunicorn app:app \
     --name $NAME \
     --workers $NUM_WORKERS \

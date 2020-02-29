@@ -10,9 +10,9 @@ class BaseAPIResource(Resource):
     error = ""
 
     def dispatch_request(self, *args, **kwargs):
-        test_func = getattr(self, 'test_%s' % request.method.lower(), None)
+        validate_func = getattr(self, f'test_{request.method.lower()}', None)
         try:
-            is_test_failed = test_func and not test_func(*args, **kwargs)
+            is_validate_failed = validate_func and not validate_func(*args, **kwargs)
         except BadRequest as e:
             if e and hasattr(e, 'data'):
                 raise HTTPBadRequest(
@@ -21,7 +21,7 @@ class BaseAPIResource(Resource):
                     message=e.data.get('message')
                 )
             raise HTTPBadRequest
-        if is_test_failed:
+        if is_validate_failed:
             message = getattr(self, 'error', '')
             if message:
                 raise HTTPBadRequest(message=message)

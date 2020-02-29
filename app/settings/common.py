@@ -1,6 +1,6 @@
 import logging
 
-APP_NAME = 'automatic-test-generator'
+APP_NAME = 'flask_setup_tut'
 LOGGER_NAME = APP_NAME
 DEBUG = False
 TESTING = False
