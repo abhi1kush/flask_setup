@@ -2,10 +2,12 @@ Flask Setup
 
 * Make dir projects
 ```
-mkdir projects
+mkdir ~/projects
+cd ~/projects
 ```
 * git clone this repo
 ```
+git clone git@github.com:abhi1kush/flask_setup.git
 ```
 
 Installation
