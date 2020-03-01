@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ```
 * Install pre-commit
 ```
-pre-commit install
+pre-commit install or sudo snap install pre-commit --classic
 ```
 * To create an alias, add this to your ~/.bash_aliases
 ```
