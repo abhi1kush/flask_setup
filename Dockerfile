@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 
 ADD . /flask_setup
 COPY setup/supervisor.conf /etc/supervisor/conf.d/
-ENTRYPOINT ["supervisor"]
+ENTRYPOINT ["/usr/bin/supervisord"]

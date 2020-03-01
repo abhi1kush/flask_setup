@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME="gunicorn"
-ROOTDIR=/automatic-test-generator/
+ROOTDIR=/flask_setup/
 
 NUM_WORKERS=1
 
