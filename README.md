@@ -8,6 +8,7 @@ cd ~/projects
 * git clone this repo
 ```
 git clone git@github.com:abhi1kush/flask_setup.git
+cd flask_setup
 ```
 
 Installation
