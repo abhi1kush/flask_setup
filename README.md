@@ -45,6 +45,5 @@ python manage.py runserver
 * Docker commands
 ```
 docker build -t flask_setup .
-&&
 docker run -p5005:80 -d -v /home/abhishek/projects/flask_setup:/flask_setup flask_setup
 ```
