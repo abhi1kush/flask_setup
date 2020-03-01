@@ -10,10 +10,10 @@ ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
-ADD requirements.txt /automatic-test-generator/
-WORKDIR /automatic-test-generator
+ADD requirements.txt /flask_setup/
+WORKDIR /flask_setup
 RUN pip install -r requirements.txt
 
-ADD . /automatic-test-generator
+ADD . /flask_setup
 COPY setup/supervisor.conf /etc/supervisor/conf.d/
 ENTRYPOINT ["supervisor"]
