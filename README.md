@@ -1,5 +1,13 @@
 Flask Setup
 
+* Make dir projects
+```
+mkdir projects
+```
+* git clone this repo
+```
+```
+
 Installation
 * Upgrade the package manager pip.
 ```
