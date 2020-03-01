@@ -11,7 +11,7 @@ python3 -m venv ~/.virtualenvs/flask_setup_env
 ```
 * Activate virtual environment
 ```
-source ~/.virtualenvs/flask_setup/bin/activate
+source ~/.virtualenvs/flask_setup_env/bin/activate
 ```
 * Install requirements in the environment.
 ```
