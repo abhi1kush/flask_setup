@@ -36,7 +36,7 @@ sudo snap install pre-commit --classic
 ```
 * To create an alias, add this to your ~/.bash_aliases
 ```
-alias flask_setup="cd ~/projects/flask_setup; source ~/.virtualenvs/flask_setup/bin/activate"
+alias flask_setup="cd ~/projects/flask_setup; source ~/.virtualenvs/flask_setup_env/bin/activate"
 ```
 * To runserver
 ```
