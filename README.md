@@ -2,9 +2,9 @@ Flask Setup
 
 Installation
 * Upgrade the package manager pip.
-
+```
 pip install --upgrade pip
-
+```
 * Create virtual environment
 python3 -m venv ~/.virtualenvs/flask_setup_env
 
