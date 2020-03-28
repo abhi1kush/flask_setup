@@ -1,8 +1,7 @@
-import functools
-
 from flask import request
-from flask_restful import reqparse
+from flask_restplus import reqparse, fields
 
+from app import api, flask_setup_ns
 from app.api.base import BaseAPIResource
 from app.redis.redis_client import RedisClient
 
@@ -39,6 +38,11 @@ class RedisDemoAPIView(BaseAPIResource):
         return {"key": self.key, "value": value}
 
 
+add_post_model = api.model('ADD', {
+    'numbers': fields.List(fields.Integer, required=True, description='Array of numbers')
+})
+
+
 class AddAPIView(BaseAPIResource):
     def test_get(self):
         self.arg1 = request.args.get('arg1')
@@ -61,5 +65,7 @@ class AddAPIView(BaseAPIResource):
         self.data = parser.parse_args()
         return True
 
+    @flask_setup_ns.expect(add_post_model)
     def post(self):
+        '''Sum of array'''
         return {"sum": sum(self.data['numbers'])}

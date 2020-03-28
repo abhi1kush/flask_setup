@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from flask_restful import Resource
+from flask_restplus import Resource
 from werkzeug.exceptions import BadRequest
 
 from app.api.error import HTTPBadRequest
