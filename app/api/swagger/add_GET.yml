@@ -1,0 +1,14 @@
+This examples uses FlaskRESTful Resource
+It works also with swag_from, schemas and spec_dict
+---
+parameters:
+  - in: path
+    name: arg1
+    type: int
+    required: true
+  - in: path
+    name: arg2
+    type: int
+    required: true
+responces:
+    200

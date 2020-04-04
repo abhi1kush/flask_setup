@@ -3,7 +3,7 @@ from flask import Flask
 from flask_restful import Api
 from app import settings
 import rq_dashboard
-
+from flasgger import Swagger
 
 class BaseRestApiException(Exception):
     pass
@@ -21,6 +21,7 @@ app.url_map.strict_slashes = False
 app.register_blueprint(rq_dashboard.blueprint, url_prefix="/math-ocr/rq")
 api = Api(app)
 redis_q = RQ(app)
+swagger = Swagger(app)
 
 __import__('app.api')
 

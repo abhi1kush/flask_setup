@@ -1,5 +1,6 @@
 import functools
 
+from flasgger import swag_from
 from flask import request
 from flask_restful import reqparse
 
@@ -52,6 +53,7 @@ class AddAPIView(BaseAPIResource):
             return False
         return True
 
+    @swag_from('./swagger/add_GET.yml')
     def get(self):
         return {"sum": int(self.arg1) + int(self.arg2)}
 
@@ -62,4 +64,16 @@ class AddAPIView(BaseAPIResource):
         return True
 
     def post(self):
+        """
+        This examples uses FlaskRESTful Resource
+        It works also with swag_from, schemas and spec_dict
+        ---
+        parameters:
+          - in: body
+            name: arg1
+            type: list
+            required: true
+        responces:
+            200
+        """
         return {"sum": sum(self.data['numbers'])}

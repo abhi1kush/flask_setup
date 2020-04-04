@@ -1,6 +1,7 @@
 import os
 
 ENV = os.getenv("ENV", "local")
+from .common import *
 from .local import *
 
 # if ENV == "production":
